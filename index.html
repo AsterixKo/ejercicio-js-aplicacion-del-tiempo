@@ -1,14 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+    <!-- Aplicación del Tiempo
+
+Vamos a crear una aplicación que muestre el tiempo (meteorológico) actual en una ciudad concreta.
+
+Crea una cuenta en OpenWeatherMap y obtén tu API key.
+
+Crea una página en la que el usuario pueda introducir el nombre de una ciudad y pueda pulsar un botón “Consultar”.
+
+Al pulsar el botón, tu app debe llamar a la API de OpenWeatherMap, obtener la información del
+tiempo para esa localidad y pintar todos los datos del tiempo para informar al usuario. Revisa
+bien la información que te devuelve la API para encontrar todo lo que pueda ser interesante para el usuario.
+
+Recuerda consultar la documentación de la API de OpenWeatherMap para descubrir cómo debes hacer las
+llamadas correspondientes a la API y obtener la información que necesitas.
+
+Recuerda añadir a tu código toda la lógica necesaria (funciones…) para hacer estas operaciones, de
+forma que el resultado sea un código organizado y reutilizable.
+
+Trabaja en la interfaz de la aplicación y haz que los datos se muestren de forma estética, con al
+menos un icono que indique el tiempo actual. -->
+
+    <div class="main-container">
+        <div class="main-container-internal">
+            <div class="city-query-content">
+                <div class="city-query-header">
+                    <h1>Introduce el nombre de una ciudad</h1>
+                </div>
+                <div class="city-query-input-div">
+                    <input id="id-city" type="text" placeholder="Introduce el nombre de una ciudad" />
+                </div>
+                <div class="city-query-button-div">
+                    <button id="id-button" onclick="queryWeather();">Consultar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="weather-container">
+        <div class="weather-container-internal">
+            <div id="weather">
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/apikey.js"></script>
     <script src="js/weather.js"></script>
 </body>
+
 </html>
