@@ -33,10 +33,10 @@ function paintWeatherOnPage(parsedWeather) {
     for (const weatherDay of parsedWeather.weather) {
         const srcImage = getSrcImageWeather(weatherDay.id);
         divContent += `<div class="image-weather-div"><img src="${srcImage}"></div>`;
-        divContent += `<p>id:${weatherDay.id}</p>`;
-        divContent += `<p>main:${weatherDay.main}</p>`;
-        divContent += `<p>description:${weatherDay.description}</p>`;
-        divContent += `<p>icon:${weatherDay.icon}</p>`;
+        divContent += `<p>id: ${weatherDay.id}</p>`;
+        divContent += `<p>main: ${weatherDay.main}</p>`;
+        divContent += `<p>description: ${weatherDay.description}</p>`;
+        divContent += `<p>icon: ${weatherDay.icon}</p>`;
     }
     divContent += `<h3>Base:</h3><p>${parsedWeather.base}</p>`;
     divContent += '<h3>Principal:</h3>';
@@ -54,8 +54,7 @@ function paintWeatherOnPage(parsedWeather) {
     divContent += `<p>deg: ${parsedWeather.wind.deg}</p>`;
 
     // divContent += '<h3>Rain:</h3>';
-    // const rain = parsedWeather.rain.1h;
-    // divContent += `<p>1h: ${parsedWeather.rain.1h}</p>`;
+    // divContent += `<p>1h: ${parsedWeather['rain.1h']}</p>`;
 
     divContent += '<h3>Nubes:</h3>';
     divContent += `<p>Todo: ${parsedWeather.clouds.all}</p>`;
